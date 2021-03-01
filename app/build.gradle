@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-        jcenter()
+        google()
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
@@ -65,12 +65,12 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'net.sourceforge.streamsupport:streamsupport:1.7.2'
     // several duplications on account of shared testcase superclass
-    testImplementation 'junit:junit:4.13'
+    testImplementation 'junit:junit:4.13.1'
     testImplementation 'com.android.support.test:rules:1.0.2'
-    testImplementation 'org.robolectric:robolectric:4.3'
-    testImplementation 'org.bouncycastle:bcprov-jdk15on:1.62'
+    testImplementation 'org.robolectric:robolectric:4.4'
+    testImplementation 'org.bouncycastle:bcprov-jdk15on:1.65'
     testImplementation 'com.android.support:appcompat-v7:27.1.1'
-    androidTestImplementation 'junit:junit:4.13'
+    androidTestImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'com.android.support:appcompat-v7:27.1.1'
     androidTestImplementation 'com.android.support.test:rules:1.0.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
