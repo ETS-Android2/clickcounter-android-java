@@ -30,32 +30,32 @@
 
 # Setting up the Environment
 
-Check out the project using Android Studio. If AS asks you if you want to create the project, 
-say No and then Open the project from the directory where it was downloaded. This creates 
-the `local.properties` file with the required line:
+Check out the project using IntelliJ IDEA - this creates the `local.properties` file with the required line:
 
     sdk.dir=<root folder of Android Studio's Android SDK installation>
 
 # Running the Application (in an emulator or connected Android device)
 
-In Android Studio: `Run > Run app`
+In IntelliJ: `Run > Run app`
 
 # Running the Tests
 
 ## Unit tests including out-of-emulator system tests using Robolectric
 
-In Android Studio:
+In IntelliJ:
 
-* Before running tests, in the *Android* view right-click on `edu.luc.etl.cs313 (test)` - if `Select ...` is one
-* of the visible menu items about 2/3 of the way down, click on that; if `Select ...` is not there, go to the next step
+* Before running tests, in the *Android* view right-click on `edu.luc.etl.cs313 (test)` - `Run Tests in ...`
+* should be one of the visible menu items toward the top, if so, click on that; if `Run Tests in ...` 
+* is not there, go to the next step:
 * Now click `Run > Edit Configurations...` and under `Android JUnit` click on `cs313 in app`
-* On the *Configuration* tab, click the far-right icon in the *Working Directory* row and select `MODULE_DIR`, then click `OK`
+* On the *Configuration* tab, click the far-right icon in the *Working Directory* row and select 
+* `MODULE_DIR`, then click `OK`
 * *If you do not do this, running the unit tests from the Android view will not work!*
-* Finally, right-click on `edu.luc.etl.cs313 (test)`, then choose `Run 'Tests in ...`
+* Finally, right-click on `edu.luc.etl.cs313 (test)`, then choose `Run Tests in ...`
 
 You can also use Gradle in a Terminal window:
 
-    $ ./gradlew testDebug # leave out "./" on the Windows command line
+    $ ./gradlew testDebug
 
 You can view the resulting test reports in HTML by opening this file in your browser:
 
@@ -65,7 +65,7 @@ You can view the resulting test reports in HTML by opening this file in your bro
 
 In Gradle:
 
-    $ ./gradlew jacocoTestDebugUnitTestReport # leave out "./" on the Windows command line
+    $ ./gradlew jacocoTestDebugUnitTestReport 
 
 You can view the resulting test reports in HTML by opening this file in your browser:
 
@@ -73,10 +73,10 @@ You can view the resulting test reports in HTML by opening this file in your bro
 
 ## Android instrumentation tests (in-emulator/device system tests)
 
-In Android Studio:
+In IntelliJ:
 
-* In the Android view, right-click on `edu.luc.etl.cs313... (androidTest)`, then choose `Run 'Tests in 'edu.luc.et...'`
+* In the Android view, right-click on `edu.luc.etl.cs313... (androidTest)`, then choose `Run Tests in 'edu.luc.etc...'`
 
 You can also use Gradle in a Terminal window:
 
-    $ ./gradlew connectedDebugAndroidTest # leave out "./" on the Windows command line
+    $ ./gradlew connectedDebugAndroidTest
