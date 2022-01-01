@@ -6,7 +6,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import android.content.pm.ActivityInfo;
-import android.support.test.annotation.UiThreadTest;
+import androidx.test.annotation.UiThreadTest;
 import android.widget.Button;
 import android.widget.TextView;
 import org.junit.Ignore;
