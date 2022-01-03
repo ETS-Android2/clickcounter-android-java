@@ -3,6 +3,7 @@ package edu.luc.etl.cs313.android.clickcounter;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.media.RingtoneManager;
@@ -91,7 +92,10 @@ public class ClickCounterActivity extends Activity {
 
     try {
       mediaPlayer.setDataSource(context, defaultRingtoneUri);
-      mediaPlayer.setAudioStreamType(AudioManager.STREAM_NOTIFICATION);
+      mediaPlayer.setAudioAttributes(new AudioAttributes.Builder()
+              .setUsage(AudioAttributes.USAGE_ALARM)
+              .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
+              .build());
       mediaPlayer.prepare();
       mediaPlayer.setOnCompletionListener(MediaPlayer::release);
       mediaPlayer.start();
