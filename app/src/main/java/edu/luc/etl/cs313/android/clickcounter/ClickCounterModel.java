@@ -12,24 +12,24 @@ public interface ClickCounterModel extends Serializable {
   /**
    * Increments the counter value.
    *
-   * @pre counter is not full.
-   * @post counter is not empty.
+   * Precondition: counter is not full.
+   * Postcondition: counter is not empty.
    */
   void increment();
 
   /**
    * Decrements the counter value.
    *
-   * @pre counter is not empty.
-   * @post counter is not full.
+   * Precondition: counter is not empty.
+   * Postcondition: counter is not full.
    */
   void decrement();
 
   /**
    * Resets the counter value.
    *
-   * @pre true.
-   * @post counter is not full.
+   * Precondition: true.
+   * Postcondition: counter is not full.
    */
   void reset();
 

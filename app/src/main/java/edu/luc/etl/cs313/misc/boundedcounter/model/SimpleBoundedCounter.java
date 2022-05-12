@@ -1,6 +1,6 @@
 package edu.luc.etl.cs313.misc.boundedcounter.model;
 
-import edu.luc.etl.cs313.android.clickcounter.BuildConfig;
+// import edu.luc.etl.cs313.android.clickcounter.BuildConfig;
 import edu.luc.etl.cs313.misc.boundedcounter.cli.BoundedCounter;
 import java8.util.function.BooleanSupplier;
 
@@ -77,8 +77,11 @@ public class SimpleBoundedCounter implements BoundedCounter {
   }
 
   protected void assertIfDebug(final BooleanSupplier p) {
+    /*
     if (BuildConfig.DEBUG && !p.getAsBoolean()) {
       throw new AssertionError();
     }
+
+     */
   }
 }

@@ -10,16 +10,16 @@ public interface BoundedCounter {
   /**
    * Increments the counter.
    *
-   * @pre the counter is not full.
-   * @post the counter is not empty.
+   * Precondition: the counter is not full.
+   * Postcondition: the counter is not empty.
    */
   void increment();
 
   /**
    * Decrements the counter.
    *
-   * @pre the counter is not empty.
-   * @post the counter is not full.
+   * Precondition: the counter is not empty.
+   * Postcondition: the counter is not full.
    */
   void decrement();
 
